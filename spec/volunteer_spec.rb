@@ -3,14 +3,14 @@ describe Volunteer do
   describe '#name' do
     it 'returns the name of the volunteer' do
       test_volunteer = Volunteer.new({:name => 'Jane', :proj_id => 1, :id => nil})
-      expect(test_volunteer.name).to eq 'ane'
+      expect(test_volunteer.name).to eq 'Jane'
     end
   end
 
   describe '#proj_id' do
     it 'returns the proj_id of the volunteer' do
       test_volunteer = Volunteer.new({:name => 'Jane', :proj_id => 1, :id => nil})
-      expect(test_volunteer.proj_id).to eq 2
+      expect(test_volunteer.proj_id).to eq 1
     end
   end
 
