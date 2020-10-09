@@ -14,6 +14,7 @@ h2 {
   color: #0f3057;
   text-align: center;
   font-family: 'Raleway', sans-serif;
+  margin-top: 30px;
 }
 
 h3 {
@@ -22,9 +23,15 @@ h3 {
   font-family: 'Raleway', sans-serif;
 }
 
+h6 {
+  font-family: 'Montserrat';
+  color: #e7e7de;
+}
+
 p, label {
   color: #00587a;
   font-family: 'Raleway', sans-serif;
+  text-align: center;
 }
 
 ul {
@@ -50,4 +57,10 @@ hr {
   border: dotted #008891 6px;
   border-bottom: none;
   margin: 100px auto;
+}
+
+footer {
+  background-color: #0f3057;
+  text-align: center;
+  padding: 50px;
 }
