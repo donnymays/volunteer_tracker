@@ -16,4 +16,21 @@ class Volunteer
     end
   end
 
+  def save
+    result = DB.exec("INSERT INTO volunteers (name, proj_id) VALUES ('{#@name}', #{@proj_id}) RETURNING id;")
+    @id = result.first().fetch("id").to_i
+  end
+  
+  def self.all
+    returned_volunteers = DB.exec("SELECT * FROM volunteers;")
+    volunteers = []
+    returned_volunteers.each() do |volunteer|
+      name = volunteer.fetch("name")
+      proj_id = volunteer.fetch("proj_id").to_i
+      id = volunteer.fetch("id").to_i
+      volunteers.push(Volunteer.new({:name => name, :proj_id => proj_id, :id => id}))
+    end
+    volunteers
+  end
+
 end
