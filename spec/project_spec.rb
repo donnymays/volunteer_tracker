@@ -40,7 +40,7 @@ describe Project do
       project1.save
       project2 = Project.new({:title => 'Teaching Ruby to Kids', :id => nil})
       project2.save
-      expect(Project.all).to eq [project1]
+      expect(Project.all).to eq [project1, project2]
     end
   end
 
