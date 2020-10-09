@@ -17,10 +17,8 @@ class Volunteer
   end
 
   def save
-    if (self.name != nil) && (self.proj_id != nil)
-      result = DB.exec("INSERT INTO volunteers (name, proj_id) VALUES ('#{@name}', #{@proj_id}) RETURNING id;")
-      @id = result.first().fetch("id").to_i
-    end
+    result = DB.exec("INSERT INTO volunteers (name, proj_id) VALUES ('#{@name}', #{@proj_id}) RETURNING id;")
+    @id = result.first().fetch("id").to_i
   end
   
   def self.all
