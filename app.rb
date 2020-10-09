@@ -64,8 +64,8 @@ end
 post('/projects/:id/volunteers') do
   @project = Project.find(params[:id].to_i)
   name = params[:name]
-  volunteer = Volunteer.new({:name => name, :proj_id => @project.id, :id => nil})
-  volunteer.save()
+  @volunteer = Volunteer.new({:name => name, :proj_id => @project.id, :id => nil})
+  @volunteer.save()
   redirect to("/projects/#{params[:id].to_i()}")
 end
 
@@ -79,12 +79,7 @@ patch('/projects/:id/volunteers/:vol_id') do
   @project = Project.find(params[:id].to_i)
   @volunteer = Volunteer.find(params[:vol_id].to_i)
   @volunteer.update({:name => params[:name]})
-  redirect to("/projects/#{params[:id].to_i()}/volunteers")
+ erb(:volunteer)
 end
 
-delete('/projects/:id/volunteers/:vol_id') do
-  @volunteer = Volunteer.find(params[:vol_id].to_i)
-  @volunteer.delete
-  redirect to('/projects/#{params[:id].to_i()}/volunteers')
-end
 
