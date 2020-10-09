@@ -10,6 +10,16 @@ _9 October 2020_
 - In terminal/command line, navigate into the directory where you would like to create a new Ruby project.
 - Clone this project using the 'git clone https://github.com/donnymays/volunteer_tracker.git' command in terminal/command line while in the desired directory.
 - Navigate to the cloned folder and run 'bundle' in your command line to download gem dependencies.
+- Postgres is necessary to work with the databases of this application. To learn about installing and running it visit: https://www.postgresql.org/docs/9.3/tutorial-install.html.
+- Once postgres is running, open another terminal and run psql.
+- To create the databases referenced in this app use the following:
+    
+    -# CREATE DATABASE volunteer_tracker;
+    -# \c volunteer_tracker;
+    -# CREATE TABLE projects (id serial PRIMARY KEY, name varchar);
+    -# CREATE TABLE volunteers (id serial PRIMARY KEY, name varchar, project_id int);
+    -# CREATE DATABASE volunteer_tracker_test WITH TEMPLATE volunteer_tracker;
+
 - Run 'ruby app.rb' in the terminal while still in the root directory of the new project. 
 - Open a browser and type the localhost port that Sinatra gives in the terminal (ex:localhost:4567)
 
