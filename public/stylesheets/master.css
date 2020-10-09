@@ -34,6 +34,12 @@ p, label {
   text-align: center;
 }
 
+/* img {
+  height: 150px;
+  width: auto;
+  text-align: center;
+} */
+
 ul {
   text-align: center;
   list-style-position: inside;
