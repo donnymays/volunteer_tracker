@@ -1,0 +1,53 @@
+body {
+  background-color: #e7e7de;
+}
+
+h1{
+  margin-top: 30px;
+  text-align: center;
+  color: #00587a;
+  font-family: 'Montserrat';
+  font-size: 72px;
+}
+
+h2 {
+  color: #0f3057;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+}
+
+h3 {
+  color: #0f3057;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+}
+
+p, label {
+  color: #00587a;
+  font-family: 'Raleway', sans-serif;
+}
+
+ul {
+  text-align: center;
+  list-style-position: inside;
+}
+
+li {
+  display: table;
+  margin:0px auto 0px auto;
+}
+
+a {
+  color: #008891;
+}
+
+a:hover {
+  color: #0f3057;
+}
+
+hr {
+  width: 4%;
+  border: dotted #008891 6px;
+  border-bottom: none;
+  margin: 100px auto;
+}
