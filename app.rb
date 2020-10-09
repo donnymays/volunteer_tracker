@@ -45,9 +45,8 @@ post('/projects/:id') do
 end
 
 patch('/projects/:id') do
-  @project = Project.find(params[:id].to_i())
-  @project.update()
-  @projects = project.all
+  @project = Project.find(params[:id].to_i)
+  @project.update({:title => params[:title]})
   redirect to("/projects/#{params[:id].to_i()}")
 end
 
